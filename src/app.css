@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	transition: all 300ms ease-in-out;
+}
 body {
 	background-color: #10151d;
-} 
+}
