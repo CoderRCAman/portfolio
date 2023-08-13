@@ -1,62 +1,43 @@
 <script>
-	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
+	import TextAnimate from './TextAnimate.svelte';
+	import { ChunkStringArray } from '$lib';
 	let texts = [
-		[['Where Creativity'], ['   Meets'], ['Functionality']],
-		[['      Code  Create'], ['Innovate']],
-		[['Solving Problems'], ['One Line at a Time']],
+		[['   Where'], ['Creativity'], ['   Meets'], ['Functionality']],
+		[['      Code'], ['Create'], ['Innovate']],
+		[['Solving'], ['Problems  '], ['One Line'], ['  at a Time']],
 		[['Bringing Code'], ['into life']]
 	];
-	let modifyText = texts.map((text) => text.map((t) => t.map((chars) => chars.split(''))));
-	console.log(modifyText);
+
+	let turn = 0;
+	let lastUpdatedTime = performance.now();
 	onMount(() => {
-		let tl = gsap.timeline({
-			repeat: -1,
-			repeatDelay: 1,
-			smoothChildTiming: true,
-			autoRemoveChildren: true
-		});
-		tl.to('.text-fancy', {
-			opacity: 1,
-			stagger: 1,
-			repeat: -1,
-			overwrite:"auto", 
-			
-		});
+		function animateText(timeStamp) {
+			let elapsed = timeStamp - lastUpdatedTime;
+			if (elapsed >= 3000) {
+				turn = (turn + 1) % 4;
+				lastUpdatedTime = timeStamp;
+				console.log(turn);
+			}
+			requestAnimationFrame(animateText);
+		}
+		animateText(performance.now());
 	});
 </script>
 
 <div class=" flex font-Tektur justify-center items-center h-full capitalize">
 	<div class="space-y-2">
-		{#each modifyText as charText}
-			<div class="flex flex-col text-fancy opacity-0 gap-1">
-				{#each charText as text}
-					<div class="text">
-						{#each text as char}
-							<div class="flex">
-								{#each char as c}
-									{#if c !== ' '}
-										<div class="border-slate-800 border-[1px] text-sm p-1 sm:p-4 box-bg">
-											{c}
-										</div>
-									{:else}
-										<div class="p-2">
-											{c}
-										</div>
-									{/if}
-								{/each}
-							</div>
-						{/each}
-					</div>
-				{/each}
-			</div>
-		{/each}
+		{#if turn == 0}
+			<TextAnimate charText={ChunkStringArray(texts[0])} />
+		{/if}
+		{#if turn == 1}
+			<TextAnimate charText={ChunkStringArray(texts[1])} />
+		{/if}
+		{#if turn == 2}
+			<TextAnimate charText={ChunkStringArray(texts[2])} />
+		{/if}
+		{#if turn == 3}
+			<TextAnimate charText={ChunkStringArray(texts[3])} />
+		{/if}
 	</div>
 </div>
-
-<style>
-	.box-bg {
-		background-color: rgb(16 21 29/1);
-		/* box-shadow: 0 0 0 .5px #2e3c51 inset,0 0 0 .5px #2e3c51; */
-	}
-</style>

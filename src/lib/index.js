@@ -11,3 +11,8 @@ export function InitLenis(Lenis) {
 
 	requestAnimationFrame(raf);
 }
+
+export function ChunkStringArray(texts) {
+	let modifyText = texts.map((t) => t.map((chars) => chars.split('')));
+	return modifyText;
+}
