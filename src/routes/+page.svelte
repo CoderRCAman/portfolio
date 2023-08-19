@@ -8,8 +8,8 @@
 	class="h-[100vh] md:flex text-white w-full md:justify-between justify-center flex-col md:flex-row select-none "
 >
 	<div class="w-full h-[50%] md:h-full flex items-center flex-col justify-center">
-		<h1 class="text-5xl md:text-7xl font-Tilt text-center">
-			FULLSTACK &nbsp; WEB <br /><span>DEVELOPER</span>
+		<h1 class="text-3xl font-Monserrate text-center font-extrabold">
+			FULLSTACK &nbsp; WEB <span>DEVELOPER</span>
 		</h1>
 		<div class="mt-10">
 			<div

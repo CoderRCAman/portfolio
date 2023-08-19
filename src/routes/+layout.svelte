@@ -35,8 +35,8 @@
 		// }
 
 		// animate();
-		let count = window.innerWidth<=800?80:100 ;
-		for (let i = 0; i < count ; i++) {
+		let count = window.innerWidth <= 800 ? 80 : 100;
+		for (let i = 0; i < count; i++) {
 			const x = Math.random() * canvas.width;
 			const y = Math.random() * canvas.height;
 			const brightness = Math.random();
@@ -104,14 +104,5 @@
 		left: 0;
 		z-index: -1;
 	}
-	.bg-canvas::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		height: 100%;
-		width: 100%;
-		transform: translateX(-50%) translateY(50vh);
-		/* background: radial-gradient(#71000b, rgba(113, 0, 11, 0) 70%); */
-	}
+	
 </style>
