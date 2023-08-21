@@ -84,7 +84,11 @@
 <div class="bg-canvas">
 	<canvas id="starsCanvas" />
 </div>
-
+<nav class=" flex justify-center gap-16 font-Monserrate text-white h-[6vh] items-center fixed w-full bg-[#10151d] z-10 lg:opacity-80 opacity-100 ">
+	<div>Home</div>
+	<div>Projects</div>
+	<div>About</div>
+</nav>
 <slot />
 
 <style>
@@ -93,8 +97,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: -1; /* Behind other content */
-		background-image: radial-gradient(500px 200px at 50% 0%, #131f33 20%, rgba(19, 30, 49, 0) 100%);
+		z-index: -3; /* Behind other content */
+		background-image: radial-gradient(500px 200px at 50% 100%, #131f33 20%, rgba(19, 30, 49, 0) 100%);
 	}
 	.bg-canvas {
 		position: fixed;
@@ -102,7 +106,8 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		z-index: -1;
+		z-index: -3;
 	}
+	
 	
 </style>
