@@ -5,8 +5,8 @@
 	import SynchYt from './SynchYT/SynchYT.svelte';
 	import TwitterClone from './Twitter Clone/TwitterClone.svelte';
 	import gsap from 'gsap';
-	import  {ScrollTrigger}  from 'gsap/ScrollTrigger';
-	// import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	// import  {ScrollTrigger}  from 'gsap/ScrollTrigger';
+	import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 	gsap.registerPlugin(ScrollTrigger);
 	onMount(() => {
 		let ivrTl = gsap.timeline({
