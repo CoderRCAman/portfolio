@@ -4,7 +4,7 @@
 	import StockFootage from './StockFootage/StockFootage.svelte';
 	import SynchYt from './SynchYT/SynchYT.svelte';
 	import TwitterClone from './Twitter Clone/TwitterClone.svelte';
-	import gsap from 'gsap/dist/gsap';
+	import gsap from 'gsap';
 	// import  {ScrollTrigger}  from 'gsap/ScrollTrigger';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	gsap.registerPlugin(ScrollTrigger);
