@@ -6,8 +6,9 @@ export default {
 		fontFamily: {
 			Monserrate: ['Montserrat'],
 			Titillium: ['Titillium Web'],
-			Tilt: ['Tilt Prism'] ,
-      Tektur : ['Tektur']
+			Tilt: ['Tilt Prism'],
+			Tektur: ['Tektur'],
+			Inter: ['Inter']
 		}
 	},
 	plugins: []

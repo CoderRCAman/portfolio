@@ -84,10 +84,30 @@
 <div class="bg-canvas">
 	<canvas id="starsCanvas" />
 </div>
-<nav class=" flex justify-center gap-16 font-Monserrate text-white h-[6vh] items-center fixed w-full bg-[#10151d] z-10 lg:opacity-80 opacity-100 ">
-	<div>Home</div>
-	<div>Projects</div>
-	<div>About</div>
+<nav
+	class=" flex justify-center gap-20 font-Inter text-sm tracking-wide font-[500] h-[7vh] items-center fixed w-full bg-[#10151d] z-10 lg:opacity-90 opacity-100"
+>
+	<a href="#home">
+		<div
+			class="border-[1px] border-emerald-800 p-2 rounded-md text-emerald-700 bg-[#10151d] hover:border-emerald-400 hover:text-emerald-400"
+		>
+			Home
+		</div>
+	</a>
+	<a href="#projects">
+		<div
+			class="border-[1px] border-emerald-800 p-2 rounded-md text-emerald-700 bg-[#10151d] hover:border-emerald-400 hover:text-emerald-400"
+		>
+			Projects
+		</div>
+	</a>
+	<a href="#about">
+		<div
+			class="border-[1px] border-emerald-800 p-2 rounded-md text-emerald-700 bg-[#10151d] hover:border-emerald-400 hover:text-emerald-400"
+		>
+			About
+		</div>
+	</a>
 </nav>
 <slot />
 
@@ -98,7 +118,11 @@
 		width: 100%;
 		height: 100%;
 		z-index: -3; /* Behind other content */
-		background-image: radial-gradient(500px 200px at 50% 100%, #131f33 20%, rgba(19, 30, 49, 0) 100%);
+		background-image: radial-gradient(
+			500px 200px at 50% 100%,
+			#131f33 20%,
+			rgba(19, 30, 49, 0) 100%
+		);
 	}
 	.bg-canvas {
 		position: fixed;
@@ -108,6 +132,4 @@
 		left: 0;
 		z-index: -3;
 	}
-	
-	
 </style>
