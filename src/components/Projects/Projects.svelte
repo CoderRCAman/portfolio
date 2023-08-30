@@ -5,7 +5,7 @@
 	import SynchYt from './SynchYT/SynchYT.svelte';
 	import TwitterClone from './Twitter Clone/TwitterClone.svelte';
 	import gsap from 'gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger.min';
+	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	gsap.registerPlugin(ScrollTrigger);
 	onMount(() => {
 		gsap.set('.works', { y: -50, opacity: 0 });
