@@ -42,3 +42,6 @@ You can preview the production build with `npm run preview`.
 & ->  ✨ 
 $ -> 💡
 * -> 🌟
+
+start: 'top 80%',
+end: '120% 90%',

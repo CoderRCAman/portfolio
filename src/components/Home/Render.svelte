@@ -8,7 +8,6 @@
 	let index = Math.floor(Math.random() * characters.length - 1);
 	let randomChar = 'a';
 	let animationReq;
-	console.log(last);
 	onMount(() => {
 		function update(stop) {
 			index = (index + 1) % characters.length;

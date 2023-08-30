@@ -85,11 +85,11 @@
 	<canvas id="starsCanvas" />
 </div>
 <nav
-	class=" flex justify-center gap-20 font-Inter text-sm tracking-wide font-[500] h-[7vh] items-center fixed w-full bg-[#10151d] z-10 lg:opacity-90 opacity-100"
+	class=" flex justify-center gap-20 font-Inter text-sm tracking-wide font-[500] h-[7vh] items-center fixed w-full bg-[#10151d] z-10 opacity-100"
 >
 	<a href="#home">
 		<div
-			class="border-[1px] border-emerald-800 p-2 rounded-md text-emerald-700 bg-[#10151d] hover:border-emerald-400 hover:text-emerald-400"
+			class="border-[1px] border-emerald-800 p-2 rounded-md text-emerald-700 bg-[#10151d] z-20 hover:border-emerald-400 hover:text-emerald-400 md:opacity-100"
 		>
 			Home
 		</div>

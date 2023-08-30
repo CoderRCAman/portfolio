@@ -8,7 +8,6 @@
 	let current = 0;
 	let stopText = {};
 	let prevTurn = turn;
-	console.log(charText)
 	onMount(() => {
 		charText.forEach((_, index) => {
 			stopText[index] = false;
@@ -52,7 +51,6 @@
 				stagger: 0.1,
 				onComplete: () => {
 					if (prevTurn == turn) turn = (turn + 1) % 4;
-					console.log(turn);
 				}
 			});
 		}
