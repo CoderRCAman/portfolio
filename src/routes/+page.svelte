@@ -16,8 +16,8 @@
             console.log(lerp(550,5,progress))
 			circle.style.strokeDashoffset = lerp(550, 5, progress);
 		});
-		queue.on('complete', () => {
-			// window.location.replace('/main')
+		queue.on('complete', () => { 
+			window.location.replace('/main')
 		});
 	});
 </script>
@@ -27,7 +27,7 @@
 		<svg width="189" height="174" viewBox="0 0 188 188" fill="#1e293b">
 			<circle id="circle" cx="94" cy="94" r="87" stroke-linecap="round" stroke-width="14" />
 		</svg>
-		<h1 class="absolute font-Tektur text-white text-2xl">{progress}%</h1>
+		<h1 class="absolute font-Tektur text-white text-3xl">{progress}%</h1>
 	</div> 
     <h1 class="mt-5 text-2xl text-slate-400 font-Monserrate font-semibold">Loading assets so we can take off 🚀...</h1>
 </section>
