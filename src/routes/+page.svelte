@@ -1,65 +1,47 @@
 <script>
-	import Icon from '@iconify/svelte';
-	import TextRender from '../components/Home/TextRender.svelte';
-	import Projects from '../components/Projects/Projects.svelte';
+	import { onMount } from 'svelte';
+	import '../app.css';
+	import { lerp } from '$lib';
+	let progress = 0;
+	onMount(() => {
+		let circle = document.getElementById('circle');
+		var queue = new createjs.LoadQueue();
+		queue.loadFile({ id: 'ivr_1', src: '/images/ivr/pr_ivr_1.png' });
+		queue.loadFile({ id: 'ivr_2', src: '/images/ivr/pr_ivr_2.png' });
+		queue.loadFile({ id: 'ivr_3', src: '/images/ivr/pr_ivr_3.png' });
+		queue.on('progress', (p) => {
+			console.log(circle);
+			progress = parseInt(p.progress * 100);
+			console.log(progress);  
+            console.log(lerp(550,5,progress))
+			circle.style.strokeDashoffset = lerp(550, 5, progress);
+		});
+		queue.on('complete', () => {
+			// window.location.replace('/main')
+		});
+	});
 </script>
 
-<section
-	id="home"
-	class="h-[100vh] md:flex text-white w-full md:justify-between justify-center flex-col md:flex-row select-none z-0"
->
-	<div class="w-full h-[65%] md:mt-0 md:h-full flex items-center flex-col justify-center relative">
-		<img src="images/JavaScript frameworks-amico.svg" alt="hero-bg" class="hero-bg lg:h-full" />
-
-		<div class="sm:w-full md:w-[550px] lg:w-[700px] p-2">
-			<h1 class="text-3xl font-Inter md:ml-4 leading-10 font-extrabold -z-1">
-				<span class="text-5xl tracking-wid text-emerald-500">FULLSTACK &nbsp; </span>
-				<span class="tracking-wide">WEB DEVELOPER</span>
-			</h1>
-
-			<div class="md:ml-4 mt-4 font-Monserrate text-neutral-50 leading-6 tracking-wider">
-				An accomplished full stack developer with proficiency in both
-				<span class="text-emerald-300">Front End</span>
-				and <span class="text-emerald-300">Back End</span>
-				technologies providing seamless user experiences and solid technical solutions.
-			</div>
-		</div>
-
-		<div class="mt-10">
-			<div
-				class="flex items-center gap-3 group border-[1px] border-transparent p-1 rounded-md hover:border-slate-800 cursor-pointer"
-			>
-				<span class="text-xl"> 🚀 </span>
-				<h2 class="font-Titillium text-lg">Projects</h2>
-				<span>
-					<Icon icon="solar:arrow-right-outline" width="30" />
-				</span>
-			</div>
-		</div>
-
-		<div class="mt-3">
-			<div
-				class="flex items-center gap-2 group border-[1px] border-transparent p-1 rounded-md hover:border-slate-800 cursor-pointer"
-			>
-				<span class="text-xl"> 📝 </span>
-				<h2 class="font-Titillium text-lg">About Me</h2>
-				<span>
-					<Icon icon="solar:arrow-right-outline" width="30" />
-				</span>
-			</div>
-		</div>
-	</div>
-	<div class="w-full font-Monserrate text-center flex justify-center items-center">
-		<TextRender />
-	</div>
+<section class="bg-[#10151d] h-screen flex flex-col items-center justify-center">
+	<div class="h-44 w-44 rounded-full bg-slate-700 flex justify-center items-center outer relative">
+		<svg width="189" height="174" viewBox="0 0 188 188" fill="#1e293b">
+			<circle id="circle" cx="94" cy="94" r="87" stroke-linecap="round" stroke-width="14" />
+		</svg>
+		<h1 class="absolute font-Tektur text-white text-2xl">{progress}%</h1>
+	</div> 
+    <h1 class="mt-5 text-2xl text-slate-400 font-Monserrate font-semibold">Loading assets so we can take off 🚀...</h1>
 </section>
-<Projects />
-<section id="about" class="h-[100vh]">ABOUT</section>
 
 <style>
-	.hero-bg {
-		position: absolute;
-		z-index: -3;
-		opacity: 0.1;
+	.outer {
+		animation: fillAnimation 4s linear infinite;
+	}
+	circle {
+		stroke: cyan;
+		stroke-width: 14px;
+		stroke-dasharray: 550px;
+		stroke-dashoffset: 550px;
+		fill: #21242e;
+		animation: fillCircle 3s linear forwards;
 	}
 </style>

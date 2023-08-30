@@ -33,6 +33,7 @@
 		"@iconify/svelte": "^3.1.4",
 		"@studio-freight/lenis": "^1.0.19",
 		"gsap": "^3.12.2",
-		"photoswipe": "^5.3.8"
+		"photoswipe": "^5.3.8",
+		"preloadjs": "^1.0.1"
 	}
 }

@@ -5,7 +5,7 @@
 
 	export let galleryID;
 	export let images;
-
+	export let scrollId;
 	onMount(() => {
 		let lightbox = new PhotoSwipeLightbox({
 			gallery: '#' + galleryID,
@@ -28,9 +28,17 @@
 			target="_blank"
 			rel="noreferrer"
 		>
-			<div class="w-full xs:w-[90%] h-full relative overflow-hidden img_container rounded-md">
-				<div class="w-full h-full absolute top-0 left-0 bg-[#10151d] slide_{index} z-30 rounded-md" />
-				<img src={image.thumbnailURL} alt="" class="w-full h-full object-cover image_{index} scale-[1.2] opacity-60 rounded-md" />
+			<div
+				class="w-full xs:w-[90%] h-full relative overflow-hidden img_container_{scrollId} rounded-md"
+			>
+				<div
+					class="w-full h-full absolute top-0 left-0 bg-[#10151d] slide_{index}_{scrollId} z-30 rounded-md"
+				/>
+				<img
+					src={image.thumbnailURL}
+					alt=""
+					class="w-full h-full object-cover image_{index}_{scrollId} scale-[1.2] opacity-60 rounded-md"
+				/>
 			</div>
 		</a>
 	{/each}

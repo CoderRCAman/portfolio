@@ -1,6 +1,8 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import RenderImage from '../common/RenderImage.svelte';
+	import { onMount } from 'svelte';
+	import { ProjectScroll } from '$lib';
 	let images = [
 		{
 			largeURL: '/images/ivr/pr_ivr_1.png',
@@ -21,15 +23,19 @@
 			height: 700
 		}
 	];
+	let scrollId = 'ivr';
+	onMount(() => {
+		ProjectScroll(scrollId);
+	});
 </script>
 
-<section id="ivr" class="min-h-screen text-white mt-5 flex flex-col md:flex-row">
+<section id={scrollId} class="min-h-screen text-white mt-5 flex flex-col md:flex-row">
 	<div class="w-full flex flex-col gap-0 items-center">
-		<h1 class="font-Inter text-center text-3xl font-extrabold text-emerald-500 fadeUp">
+		<h1 class="font-Inter text-center text-3xl font-extrabold text-emerald-500 fadeUp_{scrollId}">
 			IVR FOOTAGE
 		</h1>
 
-		<article class="font-Monserrate px-2 md:w-[80%] mt-8 lg:leading-7 fadeUp">
+		<article class="font-Monserrate px-2 md:w-[80%] mt-8 lg:leading-7 fadeUp_{scrollId}">
 			IVR FOOTAGE is a web application made for show casing images and footages of rich <span
 				class="text-emerald-500 font-bold">culture</span
 			>,
@@ -46,7 +52,9 @@
 			</a>. Worked on the UI part of the website and accomplished the conversion of design to actual
 			code using front end technologies.
 		</article>
-		<div class="self-start md:self-center px-2 mt-10 font-Titillium md:w-[80%] text-lg fadeUp">
+		<div
+			class="self-start md:self-center px-2 mt-10 font-Titillium md:w-[80%] text-lg fadeUp_{scrollId}"
+		>
 			<h1>Key take aways:</h1>
 			<ol>
 				<li>
@@ -60,11 +68,13 @@
 		</div>
 	</div>
 	<div class="w-full mt-16">
-		<h1 class="font-Titillium text-lg mb-5 below px-2 ">Below are some fo the snapshots 🖼️👇</h1>
-		<RenderImage {images} galleryID="ivr-gallery" />
-		<h1 class="font-Monserrate mt-4 flex items-center gap-2 link-live px-2">
+		<h1 class="font-Titillium text-lg mb-5 below_{scrollId} px-2">
+			Below are some fo the snapshots of IVR FOOTAGE 🖼️👇
+		</h1>
+		<RenderImage {images} galleryID="ivr-gallery" {scrollId} />
+		<h1 class="font-Monserrate mt-4 flex items-center gap-2 link-live_{scrollId} px-2">
 			Link to the live project
-			<a href="https://www.ivrfootage.com" target="_blank"> 
+			<a href="https://www.ivrfootage.com" target="_blank">
 				<Icon icon="fluent-mdl2:mini-expand" class="text-cyan-400 font-bold text-lg" />
 			</a>
 		</h1>
