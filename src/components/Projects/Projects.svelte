@@ -6,8 +6,8 @@
 	import TwitterClone from './Twitter Clone/TwitterClone.svelte';
 	import gsap from 'gsap/dist/gsap';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-	gsap.registerPlugin(ScrollTrigger);
 	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		gsap.set('.works', { y: -50, opacity: 0 });
 		gsap.set('.fadeUp', { y: 40, opacity: 0 });
 		gsap.set('.img_container', { autoAlpha: 0 });
@@ -16,7 +16,7 @@
 		let ivrTl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '#ivr',
-				start: window.innerWidth>=1024?'top 80%':'35% 130%',
+				start: window.innerWidth >= 1024 ? 'top 80%' : '35% 130%',
 				end: window.innerWidth >= 1024 ? '120% 80%' : 'bottom 80%',
 				scrub: window.innerWidth <= 1024 ? true : false,
 				// pin:true,
