@@ -1,0 +1,10 @@
+#development docker file 
+FROM node:16-alpine
+RUN apk add --no-cache libc6-compat 
+#set working dir
+WORKDIR /app 
+COPY package.json ./
+RUN yarn install --frozen-lockfile 
+COPY  . .
+EXPOSE 5173 
+CMD [ "npm run dev" ]
