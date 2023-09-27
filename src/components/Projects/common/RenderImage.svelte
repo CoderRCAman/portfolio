@@ -2,13 +2,11 @@
 	import { onMount } from 'svelte';
 	import PhotoSwipeLightbox from 'photoswipe/lightbox';
 	import 'photoswipe/style.css';
-
-	export let galleryID;
 	export let images;
-	export let scrollId;
+
 	onMount(() => {
 		let lightbox = new PhotoSwipeLightbox({
-			gallery: '#' + galleryID,
+			gallery: '#gallery',
 			children: 'a',
 			pswpModule: () => import('photoswipe')
 		});
@@ -16,30 +14,31 @@
 	});
 </script>
 
-<div
-	class="pswp-gallery p-2 md:p-0 w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-2"
-	id={galleryID}
->
+<div class="pswp-gallery" id={'gallery'}>
 	{#each images as image, index}
-		<a
-			href={image.largeURL}
-			data-pswp-width={image.width}
-			data-pswp-height={image.height}
-			target="_blank"
-			rel="noreferrer"
-		>
-			<div
-				class="w-full xs:w-[90%] h-full relative overflow-hidden img_container_{scrollId} rounded-md"
+		{#if index === 0}
+			<a
+				href={image.url}
+				data-pswp-width={image.width}
+				data-pswp-height={image.height}
+				data-pswp-src={image.url}
+				target="_blank"
 			>
-				<div
-					class="w-full h-full absolute top-0 left-0 bg-[#10151d] slide_{index}_{scrollId} z-30 rounded-md"
-				/>
-				<img
-					src={image.thumbnailURL}
-					alt=""
-					class="w-full h-full object-cover image_{index}_{scrollId} scale-[1.2] opacity-60 rounded-md"
-				/>
-			</div>
-		</a>
+				<button
+					class="bg-transparent border-[1px] border-[#11614E] text-[#2D9B81] rounded-sm px-7 py-[3px]"
+					>View</button
+				>
+			</a>
+		{:else}
+			<a
+				href={image.url}
+				data-pswp-width={image.width}
+				data-pswp-height={image.height}
+				data-pswp-src={image.url} 
+				target="_blank"
+			>
+				<div class="hidden" />
+			</a>
+		{/if}
 	{/each}
 </div>

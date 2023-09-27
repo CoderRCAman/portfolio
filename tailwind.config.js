@@ -8,7 +8,8 @@ export default {
 			Titillium: ['Titillium Web'],
 			Tilt: ['Tilt Prism'],
 			Tektur: ['Tektur'],
-			Inter: ['Inter']
+			Inter: ['Inter'],
+			Poppins: ['Poppins']
 		}
 	},
 	plugins: []

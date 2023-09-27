@@ -6,9 +6,24 @@
 	onMount(() => {
 		let circle = document.getElementById('circle');
 		var queue = new createjs.LoadQueue();
-		queue.loadFile({ id: 'ivr_1', src: '/images/ivr/pr_ivr_1.png' });
-		queue.loadFile({ id: 'ivr_2', src: '/images/ivr/pr_ivr_2.png' });
 		queue.loadFile({ id: 'ivr_3', src: '/images/ivr/pr_ivr_3.png' });
+		queue.loadFile({ id: 'st_1', src: '/images/sf/st_1.png' });
+		queue.loadFile({ id: 'st_2', src: '/images/sf/st_2.png' });
+		queue.loadFile({ id: 'st_3', src: '/images/sf/st_3.png' });
+		queue.loadFile({ id: 'st_4', src: '/images/sf/st_4.png' });
+		queue.loadFile({ id: 'st_5', src: '/images/sf/st_5.png' });
+		queue.loadFile({ id: 'st_6', src: '/images/sf/st_6.png' });
+		queue.loadFile({ id: 'synch_yt', src: '/images/synchyt/synchyt-2.png' });
+		queue.loadFile({ id: 't_1', src: '/images/twitter/t_1.png' });
+		queue.loadFile({ id: 't_2', src: '/images/twitter/t_2.png' });
+		queue.loadFile({ id: 't_3', src: '/images/twitter/t_3.png' });
+		queue.loadFile({ id: 't_4', src: '/images/twitter/t_4.png' });
+		queue.loadFile({ id: 't_5', src: '/images/twitter/t_5.png' });
+		queue.loadFile({ id: 't_6', src: '/images/twitter/t_6.png' });
+		queue.loadFile({ id: 'gsap', src: 'gsap' });
+		queue.loadFile({ id: 'gsap1', src: 'gsap/dist/gsap' });
+		queue.loadFile({ id: 'gsap', src: 'gsap/dist/ScrollTrigger' });
+
 		queue.on('progress', (p) => {
 			console.log(circle);
 			progress = parseInt(p.progress * 100);
@@ -17,7 +32,7 @@
 			circle.style.strokeDashoffset = lerp(550, 5, progress);
 		});
 		queue.on('complete', () => {
-			window.location.replace('/main')
+			window.location.replace('/main');
 		});
 	});
 </script>

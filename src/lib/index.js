@@ -118,66 +118,102 @@ export function mapToEmoji(character) {
 }
 
 export function ProjectScroll(scrollId) {
-	{
-		console.log('hah');
-		gsap.registerPlugin(ScrollTrigger);
-		gsap.set(`.fadeUp_${scrollId}`, { y: 40, autoAlpha: 0 });
-		gsap.set(`.img_container_${scrollId}`, { autoAlpha: 0 });
-		gsap.set(`.below_${scrollId}`, { autoAlpha: 0, y: -50 });
-		gsap.set(`.link-live_${scrollId}`, { autoAlpha: 0, y: -40 });
-		let ivrTl = gsap.timeline({
-			scrollTrigger: {
-				trigger: `#${scrollId}`,
-				start: window.innerWidth >= 1024 ? 'top 80%' : '35% 130%',
-				end: window.innerWidth >= 1024 ? '120% 80%' : 'bottom 80%',
-				scrub: window.innerWidth <= 1024 ? true : false,
-				// pin:true,
-				// markers:1,
-				toggleActions: 'play none play reset'
-			}
-		});
-		ivrTl.to(`.fadeUp_${scrollId}`, {
-			y: 0,
-			autoAlpha: 1,
-			stagger: 0.4,
-			duration: 0.6,
-			ease: 'none'
-		});
+	gsap.registerPlugin(ScrollTrigger);
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: `#${scrollId}`,
+			start: 'top top+=800', // When the top of the trigger hits the top of the viewport
+			end: '90% bottom', // When the bottom of the trigger hits the bottom of the viewport
+			scrub: true
+		}
+	});
 
-		let imageRevealTl = gsap.timeline();
-		let imageElements = document.querySelectorAll(`.img_container_${scrollId}`);
-		imageRevealTl.to(`.below_${scrollId}`, {
-			autoAlpha: 1,
-			y: 0,
-			duration: 0.4
-		});
-		imageElements.forEach((element, index) => {
-			imageRevealTl.to(element, {
-				autoAlpha: 1,
-				duration: 0.3,
-				ease: 'none'
-			});
-			imageRevealTl.to(`.slide_${index}_${scrollId}`, {
-				y: '100%',
-				ease: 'none',
-				duration: 0.3,
-				ease: 'none'
-			});
-			imageRevealTl.to(`.image_${index}_${scrollId}`, {
-				scale: 1,
-				ease: 'none',
-				ease: 'none',
-				duration: 0.3
-			});
-		});
-		imageRevealTl.to(`.link-live_${scrollId}`, {
-			autoAlpha: 1,
-			y: 0,
-			ease: 'none',
-			duration: 0.4
-		});
-		ivrTl.add(imageRevealTl, '-=1.3');
-	}
+	gsap.set(`.${scrollId}title`, {
+		autoAlpha: 0,
+		filter: 'blur(5px)'
+	});
+
+	gsap.set(`.${scrollId}sub`, {
+		filter: 'blur(5px)',
+		autoAlpha: 0
+	});
+	gsap.set(`.${scrollId}phone-show`, {
+		scale: 0.7,
+		autoAlpha: 0
+	});
+	gsap.set(`.${scrollId}description`, {
+		filter: 'blur(5px)',
+		autoAlpha: 0
+	});
+	gsap.set(`.${scrollId}built`, {
+		filter: 'blur(5px)',
+		autoAlpha: 0
+	});
+	gsap.set(`.${scrollId}demo`, {
+		filter: 'blur(5px)',
+		autoAlpha: 0
+	});
+	tl.to(`.${scrollId}title`, {
+		filter: 'blur(0)',
+		autoAlpha: 1
+	});
+	tl.to(`.${scrollId}sub`, {
+		filter: 'blur(0)',
+		autoAlpha: 1
+	});
+	tl.to(`.${scrollId}description`, {
+		filter: 'blur(0)',
+		autoAlpha: 1
+	});
+	tl.to(`.${scrollId}built`, {
+		filter: 'blur(0)',
+		autoAlpha: 1
+	});
+	tl.to(`.${scrollId}demo`, {
+		filter: 'blur(0)',
+		autoAlpha: 1
+	});
+	tl.to(`.${scrollId}phone-show`, {
+		scale: 1,
+		autoAlpha: 1
+	});
+}
+export function AnimateAboutScroll() {
+	gsap.registerPlugin(ScrollTrigger);
+	let tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: `#about`,
+			start: 'top top+=800', // When the top of the trigger hits the top of the viewport
+			end: '90% bottom', // When the bottom of the trigger hits the bottom of the viewport
+			scrub: true
+		}
+	});
+	let tr = gsap.timeline({
+		scrollTrigger: {
+			trigger: `#about`,
+			start: 'top top+=800', // When the top of the trigger hits the top of the viewport
+			end: '90% bottom', // When the bottom of the trigger hits the bottom of the viewport
+			scrub: true
+		}
+	});
+	gsap.set('.fadeLeft', {
+		y: 50,
+		autoAlpha: 0
+	});
+	gsap.set('.fadeRight', {
+		y: 50,
+		autoAlpha: 0
+	});
+	tl.to('.fadeLeft', {
+		y: 0,
+		autoAlpha: 1,
+		stagger: 0.4
+	});
+	tr.to('.fadeLeft', {
+		y: 0,
+		autoAlpha: 1,
+		stagger: 0.4
+	});
 }
 export function RenderMyWorks() {
 	gsap.registerPlugin(ScrollTrigger);

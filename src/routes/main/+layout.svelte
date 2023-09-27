@@ -70,7 +70,8 @@
 				ctx.beginPath();
 				// star.twinkling += 0.1; // Twinkling effect
 				// star.brightness = Math.sin(star.twinkling) * 0.5 + 0.5;
-				ctx.fillStyle = `rgba(255, 255, 255, ${star.brightness})`;
+				// ctx.fillStyle = `rgba(255, 255, 255, ${star.brightness})`;
+				ctx.fillStyle = `rgba(125, 211, 252, ${star.brightness})`;
 				ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
 				ctx.fill();
 			});
