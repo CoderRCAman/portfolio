@@ -12,7 +12,7 @@
 	id="about"
 	class="min-h-[100vh] overflow-hidden text-gray-100 flex justify-center pb-10 relative"
 >
-	<div class="container pt-16 flex flex-col md:flex-row px-3 md:px-0">
+	<div class="container pt-16 flex flex-col md:flex-row px-3">
 		<div class="w-full space-y-10">
 			<div class="fadeLeft">
 				<h1 class="font-Monserrate text-4xl font-extrabold">I'm</h1>
@@ -77,7 +77,7 @@
 				<h1 class="font-Monserrate font-bold">Education:</h1>
 				<ol>
 					<li class="list-disc ml-10 mt-4 font-Poppins font-semibold">
-						Completed my bachelors (BCA) degree from NERIM group of Institution @2021
+						Completed bachelors (BCA) degree from NERIM group of Institution @2021
 					</li>
 					<li class="list-disc ml-10 mt-4 font-Poppins font-semibold">
 						Completed masters (MCA) degree from Cotton University @2023

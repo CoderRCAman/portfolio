@@ -5,7 +5,7 @@
 	import { ProjectScroll } from '$lib/index';
 	let images = [
 		{
-			url: '/images/twitter/t_1.png',
+			url: '/images/twitter/t_1.jpg',
 			width: 1500,
 			height: 700
 		},
@@ -51,7 +51,7 @@
 	<div class="md:h-[60vh] md:w-[90vw] xl:h-[70vh] xl:w-[90vw] 2xl:w-[70vw] lg:w-[90vw] md:relative">
 		<div class="absolute h-full w-full bg-slate-700 hidden md:block">
 			<img
-				src="/images/twitter/t_1.png"
+				src="/images/twitter/t_1.jpg"
 				alt=""
 				class="h-full w-full object-cover mix-blend-multiply"
 			/>
@@ -91,7 +91,7 @@
 			</div>
 		</div>
 		<div class="md:hidden p-4 mx-4">
-			<img src="/images/twitter/t_1.png" alt="" class="{id}phone-show" />
+			<img src="/images/twitter/t_1.jpg" alt="" class="{id}phone-show" />
 		</div>
 		<div class="md:absolute -bottom-16 font-Monserrate flex items-center gap-9 p-4 font-bold">
 			<h1>Check out snapshots</h1>

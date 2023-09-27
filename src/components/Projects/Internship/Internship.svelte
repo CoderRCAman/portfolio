@@ -18,7 +18,7 @@
 	<div class="md:h-[60vh] md:w-[90vw] xl:h-[70vh] xl:w-[90vw] 2xl:w-[70vw] lg:w-[90vw] md:relative">
 		<div class="absolute h-full w-full bg-slate-700 hidden md:block">
 			<img
-				src="/images/ivr/pr_ivr_3.png"
+				src="/images/ivr/pr_ivr_3.jpg"
 				alt=""
 				class="h-full w-full object-cover mix-blend-multiply"
 			/>
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<div class="md:hidden mx-4 p-4">
-			<img src="/images/ivr/pr_ivr_3.png" alt="" class="{id}phone-show" />
+			<img src="/images/ivr/pr_ivr_3.jpg" alt="" class="{id}phone-show" />
 		</div>
 	</div>
 </section>

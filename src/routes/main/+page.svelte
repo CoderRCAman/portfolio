@@ -58,7 +58,7 @@
 				<span class="tracking-wide">WEB DEVELOPER</span>
 			</h1>
 
-			<div class="md:ml-4 mt-4 font-Monserrate text-neutral-50 leading-6 tracking-wider">
+			<div class="md:ml-4 mt-4 font-Monserrate text-neutral-50 leading-6 tracking-wider md:text-lg ">
 				An accomplished full stack developer with proficiency in both
 				<span class="text-emerald-300">Front End</span>
 				and <span class="text-emerald-300">Back End</span>
