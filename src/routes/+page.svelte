@@ -8,12 +8,8 @@
 		var queue = new createjs.LoadQueue();
 		queue.loadFile({ id: 'ivr_3', src: '/images/ivr/pr_ivr_3.jpg' });
 		queue.loadFile({ id: 'st_1', src: '/images/sf/st_1.png' });
-		queue.loadFile({ id: 'st_2', src: '/images/sf/st_2.png' });
-		queue.loadFile({ id: 'st_3', src: '/images/sf/st_3.png' });
 		queue.loadFile({ id: 'synch_yt', src: '/images/synchyt/synchyt-2.png' });
 		queue.loadFile({ id: 't_1', src: '/images/twitter/t_1.jpg' });
-		queue.loadFile({ id: 't_2', src: '/images/twitter/t_2.png' });
-		queue.loadFile({ id: 't_3', src: '/images/twitter/t_3.png' });
 		queue.loadFile({ id: 'gsap', src: 'gsap' });
 		queue.loadFile({ id: 'gsap1', src: 'gsap/dist/gsap' });
 		queue.loadFile({ id: 'gsap', src: 'gsap/dist/ScrollTrigger' });
