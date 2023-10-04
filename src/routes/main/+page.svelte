@@ -16,7 +16,7 @@
 		tl.to('.welcome', {
 			delay: 0.5,
 			autoAlpha: 0,
-			duration:0.5
+			duration: 0.5
 		});
 		tl.to('.overlay-item', {
 			y: '-500vh',
@@ -26,6 +26,7 @@
 				const elements = document.getElementsByTagName('body');
 				const body = elements[0];
 				body.style.overflow = 'auto';
+				body.classList.remove('shift-pos');
 				hide = true;
 			}
 		});
@@ -58,7 +59,7 @@
 				<span class="tracking-wide">WEB DEVELOPER</span>
 			</h1>
 
-			<div class="md:ml-4 mt-4 font-Monserrate text-neutral-50 leading-6 tracking-wider md:text-lg ">
+			<div class="md:ml-4 mt-4 font-Monserrate text-neutral-50 leading-6 tracking-wider md:text-lg">
 				An accomplished full stack developer with proficiency in both
 				<span class="text-emerald-300">Front End</span>
 				and <span class="text-emerald-300">Back End</span>

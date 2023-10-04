@@ -11,3 +11,7 @@
 body {
 	background-color: #10151d;
 }
+.shift-pos { 
+	overflow: hidden;
+	width: calc(100% - 17px);
+}

@@ -2,7 +2,8 @@
 	if (typeof window !== 'undefined') {
 		const elements = document.getElementsByTagName('body');
 		const body = elements[0];
-		body.style.overflow = 'hidden';
+		
+		body.classList.add('shift-pos')
 	}
 </script>
 
@@ -16,5 +17,5 @@
 	.overlay {
 		scroll-behavior: contain;
 	}
-    
+	
 </style>
