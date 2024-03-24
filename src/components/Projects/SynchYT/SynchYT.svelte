@@ -13,9 +13,11 @@
 	{id}
 >
 	<h1 class="{id}title my-14 -ml-7 md:ml-0 text-5xl font-Monserrate">
-		SYNCH<span class="text-red-500">YT</span>
+		SYNCHh<span class="text-red-500">YT</span>
 	</h1>
-	<div class="md:h-[60vh] md:w-[90vw] xl:h-[70vh] xl:w-[90vw] 2xl:w-[70vw] lg:w-[90vw] md:relative">
+	<div
+		class="md:min-h-[70vh] md:min-w-[90vw] xl:min-h-[70vh] xl:min-w-[90vw] 2xl:min-w-[70vw] lg:min-w-[90vw] md:relative pb-2"
+	>
 		<div class="absolute h-full w-full bg-slate-700 hidden md:block">
 			<img
 				src="/images/synchyt/synchyt-2.png"
@@ -25,7 +27,7 @@
 		</div>
 
 		<div
-			class="md:absolute md:right-0 bottom-0 bg-[#10151D] md:w-[50%] md:h-[70%] font-Poppins text-md md:mix-blend-hard-light"
+			class="md:absolute md:right-0 bottom-0 bg-[#10151D] md:w-[75%] xl:w-[50%] md:h-[80%] xl:h-[75%] font-Poppins text-md md:mix-blend-hard-light"
 		>
 			<div class="space-y-7 relative overflow-hidden px-7 py-6 h-full">
 				<span class="absolute left-0 top-0 w-[30%] h-1 bg-white" />

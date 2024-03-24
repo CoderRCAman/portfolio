@@ -1,14 +1,12 @@
-import gsap from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 // place files you want to import through the `$lib` alias in this folder.
 export function InitLenis(Lenis) {
 	const lenis = new Lenis();
-
-	lenis.on('scroll', (e) => {});
-
+	lenis.on('scroll', () => {});
 	function raf(time) {
-		lenis.raf(time);
+		lenis.raf(time);	
 		requestAnimationFrame(raf);
 	}
 

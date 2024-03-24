@@ -39,6 +39,7 @@
 					<li class="list-disc ml-10 mt-4 font-Poppins">
 						Intern at Fineworks Media and Solution Private Ltd @2023
 					</li>
+					<li class="list-disc ml-10 mt-4 font-Poppins">Intern at @Xcool Private Ltd</li>
 				</ol>
 			</div>
 		</div>
@@ -50,8 +51,10 @@
 						<span class="font-bold">NEXTJS</span> , <span class="font-bold">SVELTE KIT</span> ,
 						<span class="font-bold">Go Fibre</span>
 						,
-						<span class="font-bold">REACTJS</span>,
-						<span class="font-bold">Nodejs</span>
+						<span class="font-bold">REACTJS</span>, 
+						 <span class="font-bold">Nodejs</span>,
+						 <span class="font-bold">Laravel</span>, 
+						 <span class="font-bold">Codeigniter</span>
 					</li>
 				</ol>
 			</div>
@@ -69,7 +72,9 @@
 				<ol>
 					<li class="list-disc ml-10 mt-4 font-Poppins">
 						<span class="font-bold">Go</span> , <span class="font-bold">JavaScript</span> ,
-						<span class="font-bold">C++</span>,<span class="font-bold">Java</span>
+						<span class="font-bold">C++</span> , <span class="font-bold">Java</span> ,
+						<span class="font-bold">Php</span>
+						, <span class="font-bold">Python</span>
 					</li>
 				</ol>
 			</div>

@@ -58,7 +58,7 @@
 		</div>
 
 		<div
-			class="md:absolute md:right-0 bottom-0 bg-[#10151D] md:w-[50%] md:h-[70%] font-Poppins text-md md:mix-blend-hard-light"
+			class="md:absolute md:right-0 bottom-0 bg-[#10151D] md:w-[75%] xl:w-[50%] md:h-[80%] xl:h-[75%] font-Poppins text-md md:mix-blend-hard-light"
 		>
 			<div class="space-y-7 relative overflow-hidden px-7 py-6 h-full">
 				<span class="absolute left-0 top-0 w-[30%] h-1 bg-white" />
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<div class="md:hidden p-4">
-			<img src="/images/sf/st_1.png" alt="" class="{id}phone-show"/>
+			<img src="/images/sf/st_1.png" alt="" class="{id}phone-show" />
 		</div>
 		<div class="md:absolute -bottom-16 font-Monserrate flex items-center gap-9 p-4 font-bold">
 			<h1>Check out snapshots</h1>
